@@ -1,0 +1,9 @@
+//import the react and reactDom libraries
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+//create a react component
+
+//take the react comoponenent and show it on the screen
+ReactDOM.render(<App />, document.querySelector("#root"));
