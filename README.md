@@ -1,2 +1,3 @@
-# This is a practice project to help me understand React Hooks
+# Descriptions
+This is a practice project to help me understand React Hooks
 
