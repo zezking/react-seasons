@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-if (module.hot) {
-  module.hot.accept();
-}
+import SeasonDisplay from "./SeasonDisplay";
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +18,10 @@ class App extends React.Component {
     );
   }
 
+  componentDidUpdate() {
+    console.log("my componant was just updated - it rerendered");
+  }
+
   // React says we have to define render!!
   render() {
     if (this.state.errorMessage && !this.state.lat) {
@@ -28,7 +29,12 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return (
+        <div>
+          Latitude: {this.state.lat}
+          <SeasonDisplay />;
+        </div>
+      );
     }
 
     return <div>Loading!</div>;
